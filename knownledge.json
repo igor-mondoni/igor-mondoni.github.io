@@ -1,0 +1,40 @@
+{
+    "knownledge": [
+        {
+            "language" : "Html, Css & Javascript",
+            "typeknown" : "Intermediário"
+        },
+        {
+            "language": "Jquery",
+            "typeknown" : "Intermediário"
+        },
+        {
+            "language": "React JS e React Native",
+            "typeknown" : "Básico - Intermediário"
+        },
+        {
+            "language": "MySql, Sql Serve e Postgres",
+            "typeknown" : "Básico"
+        },
+        {
+            "language": "Adonis JS",
+            "typeknown" : "Básico"
+        },
+        {
+            "language": "Next Js",
+            "typeknown" : "Básico"
+        },
+        {
+            "language": "Php",
+            "typeknown" : "Intermediário"
+        },
+        {
+            "language": "Laravel",
+            "typeknown" : "Intermeriário"
+        },
+        {
+            "language": "Versionamento GIT",
+            "typeknown" : "Básico"
+        }
+    ]
+}

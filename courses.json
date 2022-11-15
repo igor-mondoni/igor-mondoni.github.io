@@ -1,0 +1,24 @@
+{
+    "courses": [
+        {
+            "duration": "40 Horas",
+            "course": "Interatividade para WEB com Javascript",
+            "type": "Curso livre"
+        },
+        {
+            "duration": "5 Semestre - Fevereiro 2017 ~ Junho 2019",
+            "course": "Tecnologia Em Análise e Desenvolvimento de Sistemas",
+            "type": "Superior"
+        },
+        {
+            "duration": "40 Horas",
+            "course": "Hcode Treinamentos - H101 Desenvolvimento WEB HTML5, CSS3 & Javascript",
+            "type": "Curso livre"
+        },
+        {
+            "duration": "40 Horas",
+            "course": "Hcode-Lab Web Professionals Next Js: Desenvolvimento WEB com React JS, Next Js e Adonis Js",
+            "type": "Curso livre"
+        }
+    ]
+}
