@@ -1,0 +1,39 @@
+{
+    "company": [
+        {
+            "company_name": "Level 4 Consultororia - LTDA",
+            "service_time": "Março 2020 - Junho 2020",
+            "office": "Programador Trainee",
+            "resume": "Atuei no suporte da API em Laravel do produto da empresa e realizei testes no Mobile que consumia a API",
+            "company_website": "http://www.level4.com.br",
+            "functions": [
+                "Planejar e resolver bugs do sistema",
+                "Testar e documentar erros da API do aplicativo",
+                "Desenvolver novas Funcionalidades da API e do sistema WEB"
+            ]
+        },
+        {
+            "company_name": "Ts Shara Tecnologia de Sistemas LTDA",
+            "service_time": "Agosto 2020 - Outubro 2021",
+            "office": "Programador Trainee",
+            "resume": "Trabalhei em um projeto para atender uma necessidade na empresa, um projeto para controle de serial de produtos da empresa onde contou com um software em C# simples para impressão de etiquetas, um APP mobile Android chamado TSGO MOBILE para apontamento de movimentação de números de séries e uma API para atender os 2 softwares citados anteriormente.",
+            "company_website": "https://tsshara.com.br",
+            "functions": [
+                "Desenvolver novas soluções para problemas do dia a dia na empresa;",
+                "Gerenciar o projeto;",
+                "Levantar requisitos"
+            ]
+        },
+        {
+            "company_name": "Synergie Sistemas LTDA",
+            "service_time": "Outubro 2021 - Atualmente",
+            "office": "Analista Programador Jr.",
+            "resume": "Gerencio e realizo projetos fora do escopo do produto da empresa, fazendo integrações em softwares externos e desenvolvimento de portais para estender o uso do Sênior Sistemas",
+            "company_website": "https://synergie.com.br",
+            "functions": [
+                "Analise e desenvolvimento de aplicações fora do escopo do produto da empresa que é o software ERP Sênior Sistemas"
+                
+            ]
+        }
+    ]
+}
