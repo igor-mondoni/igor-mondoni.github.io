@@ -2,7 +2,7 @@
   "name": "curriculum-vitae",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://igor-mondoni.github.io/curriculum-vitae",
+  "homepage": "https://igor-mondoni.github.io",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
