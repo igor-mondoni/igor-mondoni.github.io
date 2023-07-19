@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 import Nav from './components/Nav'
+import Pdf from './components/Pdfpagecomponent'
 import Box, { BoxProps } from '@mui/material/Box';
-
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
 export default function Index() {
 
@@ -38,16 +40,22 @@ export default function Index() {
 
   return (
     <div className="container">
-      
+
       <Nav />
+      <br />
+      <br />
+      <br />
+      <br />
+    
       <main>
-    <a href={'https://wa.me/5511989840340?text=Olá,poderia mandar uma cópia do seu currículo?'} target="_blank">whatsapp</a>
-    <a target="_blank">Imprimir</a>
-
-
+      <Pdf />
+      <Button href={'https://wa.me/5511989840340?text=Olá,poderia mandar uma cópia do seu currículo?'} target="_blank" variant="contained" color="success" startIcon={<SendIcon />}>
+        WhatsApp
+      </Button>
+        <br />
         <div style={{ width: '100%' }}>
           <Box>
-            <h1 title="'Eu só quero quee...... busquem conhecimento.' - Bilu, ET">Conhecimentos</h1>
+            <h1>Conhecimentos</h1>
             <Box
               sx={{
                 display: 'flex',

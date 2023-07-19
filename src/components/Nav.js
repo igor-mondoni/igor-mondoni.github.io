@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -10,6 +10,17 @@ const drawerWidth = 240;
 export default function Nav(props) {
 
   const container = undefined;
+  const [aboutme, setAboutme] = useState([]);
+
+  useEffect(() => {
+    fetch('aboutMe.json', {
+      headers: {
+        Accept: "application/json"
+      }
+    }).then(res => res.json()).then(res => {
+      setAboutme(res);
+    })
+  }, []);
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -20,7 +31,7 @@ export default function Nav(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Curriculum Vitae - Igor Henrique Mondoni
+            {aboutme.name} - {aboutme.city} - {aboutme.state} - {aboutme.country} 
           </Typography>
         </Toolbar>
       </AppBar>
