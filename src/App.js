@@ -5,6 +5,37 @@ import Pdf from './components/Pdfpagecomponent'
 import Box, { BoxProps } from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import ImageIcon from '@mui/icons-material/Image';
+import WorkIcon from '@mui/icons-material/Work';
+import BeachAccessIcon from '@mui/icons-material/BeachAccess';
+import Container from '@mui/material/Container';
+
+import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import HourglassEmptyOutlinedIcon from '@mui/icons-material/HourglassEmptyOutlined';
+import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
+import SubjectOutlinedIcon from '@mui/icons-material/SubjectOutlined';
+
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 
 export default function Index() {
 
@@ -39,53 +70,68 @@ export default function Index() {
   }, []);
 
   return (
-    <div className="container">
+    <Container className="container">
 
       <Nav />
       <br />
       <br />
       <br />
       <br />
-    
+
       <main>
-      <Pdf />
-      <Button href={'https://wa.me/5511989840340?text=Olá,poderia mandar uma cópia do seu currículo?'} target="_blank" variant="contained" color="success" startIcon={<SendIcon />}>
-        WhatsApp
-      </Button>
+        <Pdf />
+        <Button href={'https://wa.me/5511989840340?text=Olá,poderia mandar uma cópia do seu currículo?'} target="_blank" variant="contained" color="success" startIcon={<SendIcon />}>
+          WhatsApp
+        </Button>
         <br />
         <div style={{ width: '100%' }}>
+
           <Box>
             <h1>Conhecimentos</h1>
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'flex-start',
-                flexDirection: 'column',
-                p: 1,
-                m: 1,
-                bgcolor: 'background.paper',
-                borderRadius: 1,
-              }}
-            >
-              {knownledge.map(known => (
-                <Box>
-                  <ul>
-                    <li>Nome do curso: {known.language}</li>
-                    <li>Duração: {known.typeknown}</li>
-                  </ul>
-                </Box>
-              ))}
-            </Box>
+            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'space-between',
+                  flexWrap: 'wrap',
+                  flexDirection: 'row',
+                  p: 1,
+                  m: 1,
+                  bgcolor: 'background.paper',
+                  borderRadius: 1,
+                }}
+              >
+
+
+                {knownledge.map(known => (
+                  <ListItem>
+                    <ListItemAvatar>
+                      <Avatar>
+                        <ArticleOutlinedIcon />
+                      </Avatar>
+                    </ListItemAvatar>
+                    <ListItemText primary={known.language} secondary={known.typeknown} />
+                  </ListItem>
+                ))}
+
+              </Box>
+            </List>
           </Box>
 
 
           <Box>
-            <h1>Cursos</h1>
+            <Box>
+
+              <h1>Cursos</h1>
+            </Box>
+
             <Box
               sx={{
                 display: 'flex',
-                alignItems: 'flex-start',
-                flexDirection: 'column',
+                alignItems: 'space-between',
+                flexWrap: 'wrap',
+                flexDirection: 'row',
                 p: 1,
                 m: 1,
                 bgcolor: 'background.paper',
@@ -93,58 +139,116 @@ export default function Index() {
               }}
             >
               {courses.map(cour => (
-                <Box>
-                  <ul>
-                    <li>Nome do curso: {cour.course}</li>
-                    <li>Duração: {cour.duration}</li>
-                    <li>Tipo: {cour.type}</li>
-                  </ul>
+                <Box sx={{ minWidth: 275 }}>
+                  <Card variant="outlined">
+                    <React.Fragment>
+                      <CardContent>
+                        <Typography variant="h5" gutterBottom>
+                          {cour.course}
+                        </Typography>
+                        <Typography component="div" color="text.secondary">
+                          {cour.duration}
+                        </Typography>
+                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                          {cour.type}
+                        </Typography>
+                      </CardContent>
+                    </React.Fragment>
+                  </Card>
                 </Box>
               ))}
             </Box>
           </Box>
           <Box>
             <h1>Experiencia profissional</h1>
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'flex-start',
-                flexDirection: 'column',
-                p: 1,
-                m: 1,
-                bgcolor: 'background.paper',
-                borderRadius: 1,
-              }}
-            >
-              {companies.map(company => (
-                <Box>
-                  <ul>
-                    <li>Empresa:{company.company_name}</li>
-                    <li>Tempo de serviço:{company.service_time}</li>
-                    <li>Cargo:{company.office}</li>
-                    <li>Resumo:{company.resume}</li>
-                    <li>Website:<a href={company.company_website} target="_blank">{company.company_website}</a></li>
-                    <ul>
-                      {company.functions.map(funct => (
-                        <li>{funct}</li>
-                      ))}
-                    </ul>
-                  </ul>
-                </Box>
-              ))}
-            </Box>
+            {companies.map(company => (
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography><h2>{company.company_name}</h2></Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <HourglassEmptyOutlinedIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary={company.service_time} />
+                    </ListItem>
+
+
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <ComputerOutlinedIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary={company.office} />
+                    </ListItem>
+
+
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <ArticleOutlinedIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary={company.resume} />
+                    </ListItem>
+
+
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <SubjectOutlinedIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary={company.company_website} />
+                    </ListItem>
+
+                    <TableContainer component={Paper}>
+                      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                        <TableHead>
+                          <TableRow sx={{ background: 'rgba(0, 0, 0, 0.7)', color:'white' }}>
+                            <TableCell>Funções</TableCell>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                          {company.functions.map((funct,i) => (
+                            <TableRow
+                              key={i}
+                              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                            >
+                              <TableCell component="th" scope="row">
+                                {funct}
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
           </Box>
         </div>
       </main>
 
       <footer>
-        Direitos reservados a mim
+        WIP
       </footer>
 
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
+          padding: 0 1.0rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -286,6 +390,6 @@ export default function Index() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </Container>
   )
 }

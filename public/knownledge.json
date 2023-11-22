@@ -2,39 +2,48 @@
     "knownledge": [
         {
             "language" : "Html, Css & Javascript",
-            "typeknown" : "Intermediário"
+            "typeknown" : "Intermediário",
+            "src-image" : "Javascript_Logo.png"
         },
         {
             "language": "Jquery",
-            "typeknown" : "Intermediário"
+            "typeknown" : "Intermediário",
+            "src-image" : "70142.png"
         },
         {
             "language": "React JS e React Native",
-            "typeknown" : "Básico - Intermediário"
+            "typeknown" : "Básico - Intermediário",
+            "src-image" : "transferir.png"
         },
         {
             "language": "MySql, Sql Serve e Postgres",
-            "typeknown" : "Básico"
+            "typeknown" : "Básico",
+            "src-image" : "Sql_data_base_with_logo.png"
         },
         {
             "language": "Adonis JS",
-            "typeknown" : "Básico"
+            "typeknown" : "Básico",
+            "src-image" : "13810373.png"
         },
         {
             "language": "Next Js",
-            "typeknown" : "Básico"
+            "typeknown" : "Básico",
+            "src-image" : "Rlogical-Blog-Images-thumbnail.png"
         },
         {
             "language": "Php",
-            "typeknown" : "Intermediário"
+            "typeknown" : "Intermediário",
+            "src-image" : "PHP-logo.svg.png"
         },
         {
             "language": "Laravel",
-            "typeknown" : "Intermeriário"
+            "typeknown" : "Intermeriário",
+            "src-image" : "1200px-Laravel.svg.png"
         },
         {
             "language": "Versionamento GIT",
-            "typeknown" : "Básico"
+            "typeknown" : "Básico",
+            "src-image" : "git.png"
         }
     ]
 }
